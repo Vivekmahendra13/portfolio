@@ -1,0 +1,233 @@
+/* Global Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9; /* Light Gray Background */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+  
+  /* Container */
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Header Section */
+  header {
+    background-color: #2a3d66; /* Dark Slate Blue */
+    color: #fff;
+    text-align: left;
+    padding: 60px 0;
+    animation: slideIn 2s ease-out, fadeInHeader 1s ease-out;
+  }
+  
+  /* Profile Image */
+  .profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    animation: bounceIn 2s ease-out, zoomIn 1s ease-out;
+  }
+  
+  .header-text h1 {
+    font-size: 2.8rem;
+    margin: 0;
+    opacity: 0;
+    animation: fadeInText 1.5s ease-out 0.5s forwards;
+  }
+  
+  .header-text p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    font-weight: 400;
+    opacity: 0;
+    animation: fadeInText 1.5s ease-out 1s forwards;
+  }
+  
+  /* Navigation Bar */
+  nav {
+    background-color: #4f8a8b; /* Light Blue */
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    animation: slideInNav 1s ease-out;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 15px 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 30px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #f1f1f1;
+    text-decoration: underline;
+    transform: scale(1.1);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Section Styling */
+  section {
+    background-color: #fff;
+    padding: 50px 0;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 1s ease-out forwards, moveUp 1s ease-out forwards;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+    color: #2a3d66;
+    opacity: 0;
+    animation: fadeInText 1.5s ease-out 0.5s forwards;
+  }
+  
+  /* Skills Section */
+  #skills .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .skill {
+    width: 45%;
+    margin: 15px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  .skill:hover {
+    transform: scale(1.05);
+    background-color: #e1e1e1;
+  }
+  
+  .skill h3 {
+    font-size: 1.3rem;
+    color: #2a3d66;
+    font-weight: bold;
+  }
+  
+  .skill p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Header Fade-in and Slide-in */
+  @keyframes fadeInHeader {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Header Text Fade-in */
+  @keyframes fadeInText {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Nav Slide-in */
+  @keyframes slideInNav {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Bounce-in for Profile Image */
+  @keyframes bounceIn {
+    0% { transform: translateY(100px); opacity: 0; }
+    60% { transform: translateY(-30px); opacity: 1; }
+    80% { transform: translateY(10px); }
+    100% { transform: translateY(0); }
+  }
+  
+  /* Zoom-in Animation for Profile Image */
+  @keyframes zoomIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  
+  /* Section Slide-Up */
+  @keyframes moveUp {
+    from {
+      transform: translateY(50px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      width: 90%;
+    }
+  
+    .skills-list {
+      flex-direction: column;
+    }
+  
+    .skill {
+      width: 100%;
+    }
+  
+    header {
+      padding: 40px 0;
+    }
+  
+    .header-text h1 {
+      font-size: 2.2rem;
+    }
+  
+    .header-text p {
+      font-size: 1rem;
+    }
+  } 
